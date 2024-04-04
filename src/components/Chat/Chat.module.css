@@ -16,6 +16,7 @@
   border: 1px solid black;
   margin: 5px;
   border-radius: 3px;
+  transition: box-shadow 0.3s, background-color 1s ease, border 1s ease, padding 0.5s ease, margin 0.5s ease;
 }
 
 .msg p {
@@ -26,7 +27,10 @@
   font-weight: bold;
 }
 
-/* .wrapper {
-  display: flex;
-  flex-direction: column;
-} */
+.msg:hover {
+  box-shadow: 6px 8px 10px rgb(0, 0, 0, 0.6);
+  background-color: aliceblue;
+  border: 2px solid black;
+  padding: 15px;
+  margin: 0 5px;
+}

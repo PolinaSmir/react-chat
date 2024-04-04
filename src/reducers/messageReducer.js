@@ -32,6 +32,16 @@ export function messageReducer(state, action) {
         messages: newMessagesArray,
       };
     }
+    case ACTIONS.DELETE_MESSAGE: {
+      const { payload: deleteMessageId } = action;
+
+      const filteredMessages = state.messages.filter((currentMessage) => currentMessage.id !== deleteMessageId);
+
+      return {
+        ...state,
+        messages: filteredMessages,
+      };
+    }
     default:
       return state;
   }

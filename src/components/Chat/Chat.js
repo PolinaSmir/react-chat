@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import MessageContext from "../../contexts/MessageContext";
 import styles from "./Chat.module.css";
 import ChatItem from "./ChatItem";
 
 const Chat = (props) => {
   const {
-    dashboardState: { messages, error, isLoading },
-  } = props;
+    messageState: { messages, error, isLoading },
+  } = useContext(MessageContext);
 
   const messageCardsArray = messages.map((currentMessage) => {
     const {
@@ -14,7 +15,7 @@ const Chat = (props) => {
       user,
       user: { username },
     } = currentMessage;
-    return <ChatItem key={id} user={user} username={username} body={body} />;
+    return <ChatItem key={id} messageId={id} user={user} username={username} body={body} />;
   });
 
   return (
