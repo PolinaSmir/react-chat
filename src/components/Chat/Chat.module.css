@@ -1,0 +1,32 @@
+.container {
+  width: 75%;
+  background-color: antiquewhite;
+}
+
+.useravatar {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.msg {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+  margin: 5px;
+  border-radius: 3px;
+}
+
+.msg p {
+  margin: 2px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/* .wrapper {
+  display: flex;
+  flex-direction: column;
+} */
